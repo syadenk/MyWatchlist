@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+    <script src="fetchapi.js"></script>
+    <script src="indexMiscallenous.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="div-colour">
+        <div class="container" >
+            <div style="width: 10%; margin-left:5%; margin-top:1%;">
+                <a href="index.html"><h1 style="margin-bottom: 0 ;">MW</h1></a>
+                <p style="font-size:smaller">My Watchlist</p>
+            </div>
+            <div class="head-style" style="width:70%; margin-right:15%; margin-top:2%; display:flex;">
+                <input type="title" name="" id="searchIDMovie" class="form-input" oninput="autocompleteSearch()">
+                <button class="button-login" style="margin-top: 13px; padding:1.5%; margin-left:1%;" onclick="searchID()">Search</button>
+            </div>
+    
+            <div id="mySidebar" class="sidebar">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="index.html">Home</a>
+                <a href="yourWatchlist.html">Watchlist</a>
+            </div>
+    
+            <div id="main" style="width:20%;">
+                <div style="display: flex;">
+                    <button class="openbtn" onclick="openNav()" style=" margin-top: 17px; margin-left: 160px; padding: 5%;">&#9776;</button>
+                </div>
+            </div>
+        </div>
+        <div style="background-color: white;" id="autocompleteResults"></div>
+        <div class="container" style="margin-left: 12%;">
+            <a class="nav-a" href="index.html"><button class="nav-button" style="background-color: black;">Home</button></a>
+            <a class="nav-a" href="yourWatchlist.html"><button class="nav-button" style="background-color: black;">Your Watchlist</button></a>
+        </div>
+    </div>
+
+</header>
+
+    <div class="container-box" id="searchContainer" style="display: none;">
+      <div class="row-box" style="margin-top:10%; justify-content: left; margin:1%;">
+            <div id="imageContainer" style="width: 50%; height:auto"></div>
+            <div class="movie-box" style="width: 50%;">
+                <h1>Plot</h1>
+                <p id="Plot"></p>
+            </div>
+      </div>
+      <div class="row-box" style="margin: 1%;">
+        <div style="width: 50%;">
+            <h1 id="title"></h1>
+            <div style="display: flex;">
+                <p style="font-weight: bold;">Year :</p>
+                <p id="Year"></p>
+            </div>
+            <div style="display: flex;">
+                <p style="font-weight: bold;">Genre :</p>
+                <p id="Genre"></p>
+            </div>
+            <div style="display: flex;">
+                <p style="font-weight: bold;">Director :</p>
+                <p id="Director"></p>
+            </div>
+        </div>
+        
+        <div class="movie-box" style="width: 50%;">
+            <h1>Rating</h1>
+            <h2 style="color: white;" id="Rating"></h2>
+            <div style="display: flex; margin-top:0;">
+                <h5 style="color: white;">Source :</h5>
+                <h5 style="color: white;" id="sourceRating"></h5>
+            </div>
+        </div>
+      </div>
+      <div class="row-box" style="margin: 1%;">
+        <div style="width: 50%;">
+            <p>Actors :</p>
+            <p id="Actors"></p>
+            
+            <p id="Writer"></p>
+        </div>
+        <div class="movie-box" style="width:50%;">
+            <h1>Awards</h1>
+            <p id="Awards"></p> 
+        </div>
+      </div>
+      <div id="bruh"></div>
+      <div id="message"></div>
+  </div>
+  <div class="container-box" id="recommendedMovies">
+      <div class="row-box">
+          <div class="invisible-box" style="width: 100%;">
+              <h1>Recommended Movies for Your Watchlist!</h1>
+          </div>
+      </div>
+      <div class="row-box">
+        <div>
+            <div id="movieContainer" style="display: flex;"></div>
+        </div>
+        
+      </div>
+      
+  </div>
+</body>
